@@ -10,20 +10,23 @@
 2.好多抓取的页面需要渲染之后才能用，否则抓取的页面没有有效信息
 
  解决方法：
- 首先安装phantomjs,下载地址如下，解压安装，进行环境配置即可
 
-      http://phantomjs.org/download.html
+ * 首先安装phantomjs、chromedriver,下载地址如下，解压安装，进行环境配置即可
 
-     然后在pom文件中引用下边的依赖；
+      > phantomjs: http://phantomjs.org/download.html
+      
+      > chromedriver: https://npm.taobao.org/mirrors/chromedriver/ (https://npm.taobao.org/mirrors/chromedriver/2.10/)
 
-            <dependency>
-                <groupId>us.codecraft</groupId>
-                <artifactId>webmagic-selenium</artifactId>
-                <version>0.7.3</version>
-            </dependency>
+ * 然后在pom文件中引用下边的依赖；
 
-     最后进行修改源代码中的配置文件路径,配置文件内容可以参考resources/config.ini
-       源代码中的位置： us.codecraft.webmagic.downloader.selenium.WebDriverPool.DEFAULT_CONFIG_FILE
+        <dependency>
+            <groupId>us.codecraft</groupId>
+            <artifactId>webmagic-selenium</artifactId>
+            <version>0.7.3</version>
+        </dependency>
+
+ * 最后进行修改源代码中的配置文件路径,配置文件内容可以参考resources/config.ini
+   源代码中的位置： us.codecraft.webmagic.downloader.selenium.WebDriverPool.DEFAULT_CONFIG_FILE
 
 
 #### 参考链接：
